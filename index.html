@@ -1,6 +1,12 @@
-<!-- 회원가입 폼: 이메일과 비밀번호를 입력받습니다 -->
-<form>
-	<input type="email" placeholder="이메일">
-	<input type="password" placeholder="비밀번호">
-	<button>가입하기</button>
-</form>
+<script>
+	// 수정 전: 코드가 길고 한눈에 목적을 파악하기 힘든 for문
+	const activeUsers1 = [];
+	for (let i = 0; i < users.length; i++) {
+		if (users[i].status === 'active') {
+			activeUsers.push(users[i]);
+		}
+	}
+
+	// 수정 후: 자바스크립트 배열 메서드를 사용하여 의도가 명확하고 간결해짐
+	const activeUsers2 = users.filter(user => user.status === 'active');
+</script>
